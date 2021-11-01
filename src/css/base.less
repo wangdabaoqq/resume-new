@@ -272,6 +272,42 @@ a {
             }
         }
     }
+    ul.section-list-other {
+        padding: 10px 0 10px;
+        li {
+            // padding-left: 20px;
+            line-height: 30px;
+            list-style: circle inside;
+        }
+        > li:last-child {
+            .section-content {
+                margin-bottom: 0;
+            }
+        }
+        em {
+            display: inline-block;
+            font-family: Monaco, Menlo, @font-family;
+            font-size: 13px;
+            line-height: 15px;
+            border: 1px solid #e6e6e6;
+            border-radius: 3px;
+            color: #383838;
+            margin: 0 3px;
+            padding: 0 4px;
+            background-color: #f6f6f6;
+        }
+        strong {
+            font-family: @font-family;
+            font-size: 13px;
+            line-height: 15px;
+            font-weight: 500;
+            color: #494949;
+            margin: 0 3px;
+            padding: 0 4px;
+            border-bottom: 1px solid #eee;
+            box-shadow: inset 0 -8px #eee;
+        }
+    }
     .item-main {
         .item-hd {
             padding-top: 10px;
