@@ -1,11 +1,13 @@
 // 基础样式
 @color-main: #00b38a; // 主色
-@font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif; // 普通字体
-@font-family-title: 'Lucida Grande', 'Hiragino Sans GB', 'Hiragino Sans GB W3', @font-family; // 标题字体
+@font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei",
+    "微软雅黑", Arial, sans-serif; // 普通字体
+@font-family-title: "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3",
+    @font-family; // 标题字体
 
 .kill-ie {
     margin: 0;
-    padding: .5em 0;
+    padding: 0.5em 0;
     color: #333;
     text-align: center;
     background: #fff8e2;
@@ -31,7 +33,7 @@ body {
 }
 a {
     text-decoration: none;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .last-modified {
     position: absolute;
@@ -42,7 +44,7 @@ a {
     text-align: right;
     font-size: 12px;
     color: #bbb;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     animation: fade 1.6s;
     @media screen and (max-width: 1024px) {
         width: auto;
@@ -60,13 +62,19 @@ a {
     border-radius: 5px;
     box-shadow: 0 0 15px #c0c0c0;
     overflow: hidden;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     opacity: 0;
-    transform: translate3d(0,50px,0);
-    animation: fadeUp 2s cubic-bezier(0.19,1,0.22,1) forwards;
+    transform: translate3d(0, 50px, 0);
+    animation: fadeUp 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
     @keyframes fadeUp {
-        from { opacity: 0; transform: translate3d(0,50px,0); }
-        to { opacity: 1; transform: translate3d(0,0,0); }
+        from {
+            opacity: 0;
+            transform: translate3d(0, 50px, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
     }
     @media screen and (max-width: 1024px) {
         width: 100%;
@@ -207,12 +215,21 @@ a {
     @media screen and (max-width: 720px) {
         padding: 15px 10px 50px;
     }
-    .content-left,
-    .content-right {
-        width: 50%;
+    .content-flex {
         @media screen and (max-width: 1024px) {
             width: 100%;
+            display: block !important;
         }
+        .content-left,
+        .content-right {
+            width: 50%;
+            @media screen and (max-width: 1024px) {
+                width: 100%;
+            }
+        }
+    }
+    .content-flex {
+        display: flex;
     }
     .content-left {
         float: left;
@@ -453,7 +470,7 @@ a {
     line-height: 26px;
     color: #fff;
     background-color: @color-main;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     animation: fade 1.6s;
     @media screen and (max-width: 1246px) {
         left: auto;
@@ -463,7 +480,7 @@ a {
 }
 footer {
     text-align: center;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     animation: fade 1.6s;
     &.github-footer {
         display: block;
@@ -488,8 +505,12 @@ footer {
 }
 
 @keyframes fade {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -499,16 +520,17 @@ footer {
     height: 3px;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, 0.2);
     background-clip: padding-box;
     min-height: 15px;
-    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.07);
 }
 ::-webkit-scrollbar-thumb:vertical:hover {
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 ::-webkit-scrollbar-thumb:vertical:active {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 ::-webkit-scrollbar-button {
     height: 0;
@@ -526,7 +548,6 @@ footer {
 ::selection {
     background: #d1d1d1;
 }
-
 
 a {
     color: blue;
